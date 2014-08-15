@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"  />
+    <title>添加api到数据库</title>
+    <link rel="stylesheet" href="http://s0.xingqizuhe.com/Res/Css/xqzh2.0/home/reset.css"  />
+    <link rel="stylesheet" href="http://s0.xingqizuhe.com/Res/Css/xqzh2.0/seller/bootstrap.css"  />
+</head>
+<body>
+<div class="container">
+    <div class="form-first">
+        <form method="post" action="__URL__/insert"  class="form-horizontal" role="form"style="margin-top: 20px;">
+            <div class="control-group">
+                <label class="control-label" >接口名称</label>
+                <div class="controls">
+                    <input type="text" name="api_name" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">接口说明</label>
+                <div class="controls">
+                    <input type="text" name="api_info" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">所属模块</label>
+                <div class="controls">
+                    <select name="model_id">
+                        <option value="1">首页</option>
+                        <option value="2">baby购首页</option>
+                        <option value="3">会员中心</option>
+                        <option value="4">订单管理</option>
+                        <option value="5">地址管理</option>
+                    </select>
+                </div>
+            </div>
+            <!--<div class="control-group">-->
+                <!--<label class="control-label">是否授权</label>-->
+                <!--<div class="controls">-->
+                    <!--<input type="text" name="api_accept" />-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="control-group">
+                <label class="control-label">请求参数</label>
+                <div class="controls">
+                    <p style="color: #D14;">
+                        请按照如下格式进行填写：<br>
+                        参数名称/是否必选/参数类型/参数说明;<br>
+                        例如：<br>
+                        source/false/string/采用OAuth授权方式不需要此参数，其他授权方式为必填参数，数值为应用的AppKey;<br>
+                        有多少个就天多少个，没有可以不填。
+                    </p>
+                    <textarea name="request_string" style="width: 500px;height: 500px;" ></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">返回结果</label>
+                <div class="controls">
+                    <textarea name="back_content" cols="10" rows="10" style="width: 500px;height: 500px;" ></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">返回字段说明</label>
+                <div class="controls">
+                    <p style="color: #D14;">
+                        请按照如下格式进行填写：<br>
+                        返回值字段/字段类型/字段说明;<br>
+                        例如：<br>
+                        created_at/string/微博创建时间;<br>
+                        有多少个就天多少个,没有可以不填。
+                    </p>
+                    <textarea name="back_string" style="width: 500px;height: 500px;"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn">提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{$api_name}---{$model_name}</title>
+    <link rel="stylesheet" href="http://s1.xingqizuhe.com/Res/Css/xqzh2.0/seller/bootstrap3.css"   />
+    <style type="text/css">
+        *{font-family: '微软雅黑';}
+        .container-title{border-bottom: 1px solid #cccccc;}
+        .container-content{padding: 10px;}
+        .container-content .content-model .content-model-title{border-bottom: 1px solid #cccccc;}
+        .container-content .content-model{margin-top: 30px;}
+        .container-content .content-model .content-model-content{margin-top: 5px;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="container-title main-name">
+        <h1>{$api_name}</h1>
+    </div>
+    <div class="container-content">
+        <div class="content-model">
+            <div class="content-model-title">
+                <h3 class="name">{$api_name}</h3>
+            </div>
+            <div class="content-model-content">
+                <p class="explain">{$api_info}</p>
+            </div>
+        </div>
+        <!--<div class="content-model">-->
+            <!--<div class="content-model-title">-->
+                <!--<h3>URL</h3>-->
+            <!--</div>-->
+            <!--<div class="content-model-content">-->
+                <!--<p class="link-url">https://api.weibo.com/2/statuses/friends_timeline.json</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="content-model">
+            <div class="content-model-title">
+                <h3>支持格式</h3>
+            </div>
+            <div class="content-model-content">
+                <p>JSON</p>
+            </div>
+        </div>
+        <div class="content-model">
+            <div class="content-model-title">
+                <h3>HTTP请求方式</h3>
+            </div>
+            <div class="content-model-content">
+                <p>GET</p>
+            </div>
+        </div>
+        <!--<div class="content-model">-->
+            <!--<div class="content-model-title">-->
+                <!--<h3>是否需要登录</h3>-->
+            <!--</div>-->
+            <!--<div class="content-model-content">-->
+                <!--<p>是</p>-->
+                <!--<p>关于登录授权</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="content-model">-->
+            <!--<div class="content-model-title">-->
+                <!--<h3>访问授权限制</h3>-->
+            <!--</div>-->
+            <!--<div class="content-model-content">-->
+                <!--<p>访问级别：普通接口</p>-->
+                <!--<p>频次限制：是</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="content-model">
+            <div class="content-model-title">
+                <h3>请求参数</h3>
+            </div>
+            <div class="content-model-content">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>必选</th>
+                        <th>类型及范围</th>
+                        <th>说明</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="data2" id="vo">
+                        <tr>
+                            <td>{$vo.request_name}</td>
+                            <td>{$vo.request_if}</td>
+                            <td>{$vo.request_var}</td>
+                            <td>{$vo.request_detail}</td>
+                        </tr>
+                    </volist>
+                    </tbody>
+                    <!--<tr>-->
+                        <!--<td>access_token</td>-->
+                        <!--<td>false</td>-->
+                        <!--<td>string</td>-->
+                        <!--<td>采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>since_id</td>-->
+                        <!--<td>false</td>-->
+                        <!--<td>int64</td>-->
+                        <!--<td>若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>max_id</td>-->
+                        <!--<td>false</td>-->
+                        <!--<td>string</td>-->
+                        <!--<td>若指定此参数，则返回ID小于或等于max_id的微博，默认为0。</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>count</td>-->
+                        <!--<td>false</td>-->
+                        <!--<td>int</td>-->
+                        <!--<td>单页返回的记录条数，最大不超过100，默认为20。</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>page</td>-->
+                        <!--<td>false</td>-->
+                        <!--<td>string</td>-->
+                        <!--<td>返回结果的页码，默认为1。</td>-->
+                    <!--</tr>-->
+                </table>
+            </div>
+        </div>
+        <!--<div class="content-model">-->
+            <!--<div class="content-model-title">-->
+                <!--<h3>注意事项</h3>-->
+            <!--</div>-->
+            <!--<div class="content-model-content">-->
+                <!--<p>无</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="content-model">-->
+            <!--<div class="content-model-title">-->
+                <!--<h3>调用样例及调试方式</h3>-->
+            <!--</div>-->
+            <!--<div class="content-model-content">-->
+                <!--<p>无</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="content-model">
+            <div class="content-model-title">
+                <h3>返回结果</h3>
+            </div>
+            <div class="content-model-content">
+                <p>json示例</p>
+                <div class="code">
+                    <pre>{$back_content}</pre>
+                </div>
+            </div>
+        </div>
+        <div class="content-model">
+            <div class="content-model-title">
+                <h3>返回字段说明</h3>
+            </div>
+            <div class="content-model-content">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>返回值字段</th>
+                        <th>字段类型</th>
+                        <th>字段说明</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="data3" id="vol">
+                        <tr>
+                            <td>{$vol.back_name}</td>
+                            <td>{$vol.back_var}</td>
+                            <td>{$vol.back_detail}</td>
+                        </tr>
+                    </volist>
+                    <!--<tr>-->
+                        <!--<td>id</td>-->
+                        <!--<td>int64</td>-->
+                        <!--<td>微博ID</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>mid</td>-->
+                        <!--<td>int64</td>-->
+                        <!--<td>微博MID</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>idstr</td>-->
+                        <!--<td>string</td>-->
+                        <!--<td>字符串型的微博ID</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>text</td>-->
+                        <!--<td>string</td>-->
+                        <!--<td>微博信息内容</td>-->
+                    <!--</tr>-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--<div class="content-model">-->
+            <!--<div class="content-model-title">-->
+                <!--<h3>其他</h3>-->
+            <!--</div>-->
+            <!--<div class="content-model-content">-->
+                <!--<p>无</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
